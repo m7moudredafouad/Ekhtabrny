@@ -1,0 +1,23 @@
+<div class="tips">
+    {{#if startsAt}}
+        <div class="tips__tip">
+            <p class="tips__tip-description">Next Quiz</p>
+            {{#if empty}}
+            <div class="tips__tip-theTip">
+                <img src="/img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                <p class="tips__tip-content tips__tip-group" id="quizStartsAt" data-date="{{startsAt}}"></p>
+            </div>
+
+            {{#if quizAvailable}}
+                <a href="/groups/{{group._id}}/quiz/{{group.nextquiz.quiz}}/answer" class="btn btn--green">Start</a>
+            {{/if}}
+
+            {{else}}
+            <div class="tips__tip-theTip">
+                <p class="tips__tip-content">You have got <span class="tips__tip-group">{{grade}}</span></p>
+            </div>
+            {{/if}}
+        </div>
+    {{/if}}
+
+</div>

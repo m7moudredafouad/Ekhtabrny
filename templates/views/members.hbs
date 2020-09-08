@@ -1,0 +1,36 @@
+{{>header}}
+{{>groupSidebar}}
+
+<div class="feed" id="members">
+    <table>
+        <thead>
+            <tr>
+                {{#if isAdmin}}
+                <th></th>
+                {{/if}}
+                <th>الكود</th>
+                <th>الاسم</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#members}}
+            <tr>
+                <td>
+                {{#if ../isAdmin}}
+                    {{#ifCond role '!==' 'admin'}}
+                        <button class="btn btn-sm">تعديل</button>
+                        <button class="btn btn-sm btn-line" id="remove" data-id="{{userId}}" title="Remove member">حذف</button>
+                    {{/ifCond}}
+                {{/if}}
+                </td>
+                <td>{{code}}</td>
+                <td>{{name}}</td>
+            </tr>
+            {{/members}}
+        </tbody>
+    </table>
+</div>
+
+{{>groupTips}}
+{{>footer}}

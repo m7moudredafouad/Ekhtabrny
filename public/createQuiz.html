@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="alert"></div>
+    <nav class="nav">
+        <a href="#" class="logo link">Q</a>
+
+        <form class="search">
+            <input type="text" class="search_input" name="search" placeholder="Search">
+            <button class="search_button">
+                <svg class="search_icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+
+        <div class="user__nav">
+            <div class="user__nav_user">
+                <img src="img/user.jpg" alt="user profile" class="user__nav_photo">
+                <a href="/group.html" class="link">Mahmoud</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/" class="link">Home</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/createQuiz.html" class="link">Create</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/quiz.html" class="link">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body">
+        <div class="tools">
+            <div class="tools__item">
+                <img src="img/user.jpg" alt="user profile" class="tools__photo">
+                <a href="#" class="link tools__link">Mahmoud R. Fouad</a>
+            </div>
+
+            <p class="tools__sep">groups</p>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">EECE 2022</a>
+            </div>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">EECE 2021</a>
+            </div>
+
+            <p class="tools__sep">shortcuts</p>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">Go to</a>
+            </div>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">Help</a>
+            </div>
+            
+        </div>
+
+        <div class="makeQuiz">
+            <form name="quiz" class="form">
+                <div class="form__group">
+                    <label class="form__group-input--label">Question</label>
+                    <input type="text" class="form__group-input w100" name="question" placeholder="The question here">
+                    <label class="form__group-input--label">Add options</label>
+                    <input type="text" id="options" class="form__group-input w100" placeholder="Option here">
+                    <button type="button" class="btn btn-option btn-sm" onclick="addOption(this)">
+                        <svg class="btn-option--icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                    <input type="text" class="form__group-input" name="answer" readonly hidden required>
+                    <div id="choices" class="form__group-choices">
+                        <!-- <input type="text" onclick="makeRightAnswer(this)" ondblclick="removeOption(this)" value="Ahmed" class="form__group-readOnly" name="choice[]" readonly> -->
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn--white" onclick="addQuestion(this)">Add question</button>
+                <button type="submit" class="btn btn--green">Save Quiz</button>
+            </form>
+        </div>
+
+        <div class="tips">
+            <div class="tips__tip">
+                <p class="tips__tip-description">Next Quizzes</p>
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+            </div>
+
+            <div class="tips__tip">
+                <p class="tips__tip-description">Bla Bla</p>
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/alert.js"></script>
+    <script src="js/createQuiz.js"></script>
+</body>
+</html>

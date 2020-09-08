@@ -1,0 +1,38 @@
+<div class="model" id="joinGroup" style="display: none;">
+    <div class="model__body">
+        <p class="model__close" id="closeJoin">X</p>
+        <p class="model__title">انت علي وشك الانضمام الي فصل</p>
+        <form name="joinGroup" class="form mt-2">
+            <div class="form__group">
+                <label for="id" class="form-input--label mb-1">الكود الخاص بالفصل</label>
+                <input type="text" id="id" class="form-input w100" name="groupid" placeholder="اكتب الكودالخاص بالفصل هنا">
+            </div>
+
+            <div class="form__group">
+                <label for="name" class="form-input--label mb-1">اسمك في الفصل</label>
+                <input type="text" id="name" class="form-input w100" name="name" placeholder="اكتب اسمك هنا">
+            </div>  
+
+            <div class="form__group">
+                <label for="code" class="form-input--label mb-1">الكود الخاص بك في الفصل</label>
+                <input type="number" min="1" id="code" class="form-input w100" name="code" placeholder="اكتب الكود الخاص بك هنا">
+            </div>
+            
+            <button type="submit" class="btn w100">طلب انضمام</button>
+        </form>
+    </div>
+</div>
+
+<div class="model" id="createGroup" style="display: none;">
+    <div class="model__body">
+        <p class="model__close" id="closeCreate">X</p>
+        <p class="model__title">انت علي وشك انشاء فصل جديد</p>
+        <form name="createGroup" class="form mt-1">
+            <div class="form__group">
+                <label for="name" class="form-input--label mb-1">اسم الفصل</label>
+                <input type="text" id="name" class="form-input w100" name="groupName" placeholder="اكتب اسم الفصل هنا">
+            </div>
+            <button type="submit" class="btn w100">انشاء</button>
+        </form>
+    </div>
+</div>

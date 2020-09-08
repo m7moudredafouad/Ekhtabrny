@@ -1,0 +1,38 @@
+{{>header}}
+{{>groupSidebar}}
+
+<div class="feed" id="quizzes">
+    <form name="nextQuizDate" class="form" title="Choose the date and time of your quiz that should start and end at">
+        <div class="form__group">
+            <label for="start" style="margin-right: 5rem">Start at</label>
+            <input type="datetime-local" id="start" name="startsAt">
+        </div>
+        <div class="form__group">
+            <label for="end" style="margin-right: 5.7rem">End at</label>
+            <input type="datetime-local" id="end" name="endsAt">
+        </div>
+    </form>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>اسم الاختبار</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#quizzes}}
+            <tr>
+                <td><a href="/groups/{{group}}/quiz/{{_id}}" class="quizzes__link">Quiz {{@index}}</a></td>
+                <td>
+                    <button class="btn btn-sm" data-id="{{_id}}" id="nextQuiz" title="Make the next quiz">التالي</button>
+                    <button class="btn btn-line btn-sm" data-id="{{_id}}" id="removeQuiz" title="Delete the quiz">حذف</button>
+                </td>
+            </tr>
+        {{/quizzes}}
+        </tbody>
+    </table>
+</div>
+{{>groupTips}}
+{{>footer}}

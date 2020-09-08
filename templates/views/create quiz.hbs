@@ -1,0 +1,30 @@
+{{>header}}
+{{>groupSidebar}}
+
+<div class="feed">
+    <form name="quiz" class="form">
+        <div class="form__group form__question">
+
+            <label class="form-input--label">السؤال</label>
+            <textarea name="question" class="form__group-textarea w100" style="font-size: 1.6rem;"  cols="30" rows="10" placeholder="اكتب السؤال هنا"></textarea>
+
+            <label class="form-input--label">اضف اختيارات</label>
+            <input type="text" id="options" class="form-input w60" placeholder="اكتب الاختيار هنا">
+            <button type="button" class="btn btn-sm w20" onclick="addOption(this)">اضف الاختيار</button>
+            <input type="text" class="form-input" name="answer" readonly hidden required>
+            <div id="choices" class="form-choices">
+                <!-- <input type="text" onclick="makeRightAnswer(this)" ondblclick="removeOption(this)" value="Ahmed" class="form__group-readOnly" name="choice[]" readonly> -->
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-line" onclick="addQuestion(this)">سؤال جديد</button>
+        <button type="submit" class="btn">حفظ الاختبار</button>
+    </form>
+</div>
+
+{{>groupTips}}
+<div class="alert"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="/js/createQuiz.js"></script>
+{{>footer}}

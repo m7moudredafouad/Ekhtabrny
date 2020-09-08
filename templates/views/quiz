@@ -1,0 +1,24 @@
+{{>header}}
+{{>nav}}
+
+<div class="body">
+
+    <div class="quiz">
+
+        {{#questions}}
+            <div class="form__group">
+                <p class="form__group-question">{{question}}</p>
+                {{#choices}}
+                <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="{{this}}" name="{{../number}}" value="{{this}}">
+                    <label for="{{this}}" class="form__radio-label">{{this}}</label>
+                </div>
+                {{/choices}}
+            </div>
+        {{/questions}}
+    </div>
+
+    {{>groupTips}}
+</div>
+
+{{>footer}}

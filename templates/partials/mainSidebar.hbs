@@ -1,0 +1,42 @@
+<div class="sidebar">
+    <div>
+        <div class="p1">
+            <a href="/" class="logo">اختبرني</a>
+        </div>
+        
+        <div class="user">
+            <img src="/img/user.jpg" alt="user profile" class="user__photo">
+            <a href="/profile" class="user__name">{{user.name}}</a>
+        </div>
+        
+        <div class="groups p1">
+        {{#if myGroups}}
+            <h4 class="heading"><a href="/" class="groups__link">فصولي</a></h4>
+            {{#myGroups}}
+            <div class="groups__name p-5"><a href="/groups/{{groupId._id}}" class="groups__link">{{groupId.name}}</a></div>
+            {{/myGroups}}
+        {{/if}}
+
+        {{#if groups}}
+            <h4 class="heading mt-1"><a href="/" class="groups__link">الفصول</a></h4>
+            {{#groups}}
+            <div class="groups__name p-5"><a href="/groups/{{groupId._id}}" class="groups__link">{{groupId.name}}</a></div>
+            {{/groups}}
+        {{/if}}
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        {{#if user}}
+        <a href="#" class="footer__el" id="showCreateGroupModel">انشاء فصل</a>
+        <a href="#" class="footer__el"  id="showJoinGroupModel">الانضمام الي فصل</a>
+        <a href="/" class="footer__el">المساعده</a>
+        <a href="/" id="logout" class="footer__el">تسجيل الخروج</a>
+        {{else}}
+        <a href="/" class="footer__el">تسجيل الدخول</a>
+        <a href="/" id="logout" class="footer__el">التسجيل</a>
+        {{/if}}
+    </div>
+</div>

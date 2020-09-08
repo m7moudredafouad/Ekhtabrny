@@ -1,0 +1,28 @@
+    <div class="sidebar">
+        <div>
+            <div class="p1">
+                <a href="/" class="logo">اختبرني</a>
+            </div>
+            
+            <div class="user">
+                <a href="/groups/{{group._id}}" class="user__name">{{group.name}}</a>
+            </div>
+            
+            <div class="groups p1">
+                <div class="groups__name p-5"><a href="/groups/{{group._id}}" class="groups__link">المناقشات</a></div>
+                <div class="groups__name p-5"><a href="/groups/{{group._id}}/members" class="groups__link">الاعضاء</a></div>
+
+                {{#if isAdmin}}
+                <div class="groups__name p-5"><a href="/groups/{{group._id}}/pending" class="groups__link">طلبات التسجيل</a></div>
+                <div class="groups__name p-5"><a href="/groups/{{group._id}}/createquiz" class="groups__link">اختبار جديد</a></div>
+                <div class="groups__name p-5"><a href="/groups/{{group._id}}/quizzes" class="groups__link">الاختبارات</a></div>
+                {{/if}}
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <a href="/" class="footer__el">المساعده</a>
+            <a href="/" class="footer__el" id="logout">تسجيل الخروج</a>
+        </div>
+    </div>

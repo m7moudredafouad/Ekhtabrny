@@ -1,0 +1,28 @@
+{{>header}}
+{{>groupSidebar}}
+
+<div class="feed">
+    {{#if empty}}
+    <form name="answer_form" data-id="{{quizid}}" class="form">
+        {{#questions}}
+            <div class="form__group form__question">
+                <h4 class="mb-2">{{question}}</h4>
+                {{#choices}}
+                <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="{{this}}{{../number}}" name="{{../number}}" value="{{this}}">
+                    <label for="{{this}}{{../number}}" class="form__radio-label">{{this}}</label>
+                </div>
+                {{/choices}}
+            </div>
+        {{/questions}}
+    
+        <button type="submit" class="btn">Send Answers</button>
+    </form>
+    {{else}}
+    <h4>{{grade}} لقد حلصت علي</h4>
+    {{/if}}
+
+</div>
+
+{{>groupTips}}
+{{>footer}}

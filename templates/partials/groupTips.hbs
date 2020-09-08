@@ -1,0 +1,18 @@
+<div class="tips">
+    {{#if startsAt}}
+        <div class="tip mb-2">
+            <h1 class="tip-group mb-1">{{group.name}}</h1>
+            {{#if empty}}
+                <h3 id="quizStartsAt" data-date="{{startsAt}}"></h3>
+            
+                {{#if quizAvailable}}
+                    <a href="/groups/{{group._id}}/quiz/{{group.nextquiz.quiz}}/answer" class="btn w100">ابدا الاختبار الان</a>
+                {{/if}}
+
+            {{else}}
+                    <h2>لقد حصلت علي {{grade}}</h2>
+            {{/if}}
+        </div>
+    {{/if}}
+
+</div>

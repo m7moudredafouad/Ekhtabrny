@@ -1,0 +1,29 @@
+{{>header}}
+{{>groupSidebar}}
+
+<div class="feed">
+    <button class="btn mb-2" id="export">تصدير كملف اكسيل</button>
+
+    <table id="member_table">
+        <thead>
+            <tr>
+                <th>الكود</th>
+                <th>الاسم</th>
+                <th>درجه الاختبار</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#answers}}
+            <tr>
+                <td>{{memberId.code}}</td>
+                <td>{{memberId.name}}</td>
+                <td>{{grade}}</td>
+            </tr>
+            {{/answers}}
+        </tbody>
+    </table>
+</div>
+
+    
+{{>groupTips}}
+{{>footer}}

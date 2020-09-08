@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="alert"></div>
+    <nav class="nav">
+        <a href="#" class="logo link">Q</a>
+
+        <form class="search">
+            <input type="text" class="search_input" name="search" placeholder="Search">
+            <button class="search_button">
+                <svg class="search_icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+
+        <div class="user__nav">
+            <div class="user__nav_user">
+                <img src="img/user.jpg" alt="user profile" class="user__nav_photo">
+                <a href="/group.html" class="link">Mahmoud</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/" class="link">Home</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/createQuiz.html" class="link">Create</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/quiz.html" class="link">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body">
+        <div class="tools">
+            <div class="tools__item">
+                <a href="#" class="link tools__link f25b">EECE 2022</a>
+            </div>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">Discussion</a>
+            </div>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">Quizzes</a>
+            </div>
+            
+        </div>
+
+        <div class="quizzes">
+            <form name="nextQuizDate" class="form" title="Choose the date and time of your quiz that should start and end at">
+                <div class="form__group">
+                    <label for="start" style="margin-right: 5rem">Start at</label>
+                    <input type="datetime-local" id="start" name="startsAt">
+                </div>
+                <div class="form__group">
+                    <label for="end" style="margin-right: 5.7rem">End at</label>
+                    <input type="datetime-local" id="end" name="endsAt">
+                </div>
+            </form>
+            <hr>
+
+            <div class="quizzes__quiz">
+                <a href="#" class="link quizzes__link">Quiz 1</a>
+                <div data-id="1">
+                    <button class="btn btn--green btn-sm" onclick="nextQuiz(this)" title="Make the next quiz">Next</button>
+                    <button class="btn btn--red-line btn-sm" title="Delete the quiz">Delete</button>
+                </div>
+            </div>
+
+            <div class="quizzes__quiz">
+                <a href="#" class="link quizzes__link">Quiz 1</a>
+                <div data-id="2">
+                    <button class="btn btn--green btn-sm" onclick="nextQuiz(this)" title="Make the next quiz">Next</button>
+                    <button class="btn btn--red-line btn-sm" title="Delete the quiz">Delete</button>
+                </div>
+            </div>
+
+            <div class="quizzes__quiz">
+                <a href="#" class="link quizzes__link">Quiz 1</a>
+                <div data-id="3">
+                    <button class="btn btn--green btn-sm" onclick="nextQuiz(this)" title="Make the next quiz">Next</button>
+                    <button class="btn btn--red-line btn-sm" title="Delete the quiz">Delete</button>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="tips">
+            <div class="tips__tip">
+                <p class="tips__tip-description">Next Quizzes</p>
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+            </div>
+
+            <div class="tips__tip">
+                <p class="tips__tip-description">Bla Bla</p>
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/alert.js"></script>
+    <script src="js/nextQuiz.js"></script>
+</body>
+</html>

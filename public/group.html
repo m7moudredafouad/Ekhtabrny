@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="alert"></div>
+    <nav class="nav">
+        <a href="#" class="logo link">Q</a>
+
+        <form class="search">
+            <input type="text" class="search_input" name="search" placeholder="Search">
+            <button class="search_button">
+                <svg class="search_icon">
+                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                </svg>
+            </button>
+        </form>
+
+        <div class="user__nav">
+            <div class="user__nav_user">
+                <img src="img/user.jpg" alt="user profile" class="user__nav_photo">
+                <a href="/group.html" class="link">Mahmoud</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/" class="link">Home</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/createQuiz.html" class="link">Create</a>
+            </div>
+
+            <div class="user__nav_user">
+                <a href="/quiz.html" class="link">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body">
+        <div class="tools">
+            <div class="tools__item">
+                <a href="#" class="link tools__link f25b">EECE 2022</a>
+            </div>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">Discussion</a>
+            </div>
+
+            <div class="tools__item">
+                <svg class="tools__icon">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>
+                <a href="#" class="link tools__link">Quizzes</a>
+            </div>
+            
+        </div>
+
+        <div class="feed">
+            <div class="feed__share">
+                <form class="form">
+                    <div class="form__group">
+                        <textarea name="post" class="form__group-textarea" cols="30" rows="10" placeholder="Write whatever you want here"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--green w100">Share</button>
+                </form>
+            </div>
+
+            <div class="feed__post">
+                <div class="feed__info">
+                    <img src="img/user.jpg" alt="user profile" class="feed__info-photo">
+
+                    <div class="feed__info-cont">
+                        <div class="feed__info-names">
+                            <a href="#" class="link feed__info-link">Mahmoud R. Fouad</a>
+                        </div>
+                        <a href="#" class="link feed__info-date">Yesterday</a>
+                    </div>    
+                </div>
+
+                <div class="feed__content">
+                    <p class="feed__content-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum blanditiis porro qui! Placeat, animi? Accusantium est praesentium architecto illum cumque excepturi eligendi fugit tenetur aliquam, explicabo, magnam odit. Tempore.</p>
+                </div>
+
+                <hr>
+            
+                <div class="feed__social">
+                    <div class="feed__social-re">    
+                        <div class="feed__social-react feed__social-active">Vote</div>
+                        <div class="feed__social-react">Comment</div>
+                    </div>
+                    <p class="feed__social-votes">9 Votes</p>
+                </div>
+
+                <hr>
+
+                <div class="feed__comments">
+                    <div class="feed__comments_comment">
+
+                        <div class="feed__comments_comment-info">
+                            <img src="img/user.jpg" alt="user profile" class="feed__comments_comment-info--photo">
+        
+                            <div class="feed__comments_comment-info--cont">
+                                <a href="#" class="link feed__comments_comment-info--link">Mahmoud R. Fouad</a>
+                                <a href="#" class="link feed__comments_comment-info--date">Yesterday</a>
+                            </div>    
+                        </div>
+        
+                        <div class="feed__comments_comment-content">
+                            <p class="feed__comments_comment-content--post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae nemo voluptatum. Neque atque.</p>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="feed__comments_comment">
+
+                        <div class="feed__comments_comment-info">
+                            <img src="img/user.jpg" alt="user profile" class="feed__comments_comment-info--photo">
+        
+                            <div class="feed__comments_comment-info--cont">
+                                <a href="#" class="link feed__comments_comment-info--link">Mahmoud R. Fouad</a>
+                                <a href="#" class="link feed__comments_comment-info--date">Yesterday</a>
+                            </div>    
+                        </div>
+        
+                        <div class="feed__comments_comment-content">
+                            <p class="feed__comments_comment-content--post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae nemo voluptatum. Neque atque.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="feed__post">
+                <div class="feed__info">
+                    <img src="img/user.jpg" alt="user profile" class="feed__info-photo">
+
+                    <div class="feed__info-cont">
+                        <div class="feed__info-names">
+                            <a href="#" class="link feed__info-link">Mahmoud R. Fouad</a>
+                        </div>
+                        <a href="#" class="link feed__info-date">Yesterday</a>
+                    </div>    
+                </div>
+
+                <div class="feed__content">
+                    <p class="feed__content-post">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eum blanditiis porro qui! Placeat, animi? Accusantium est praesentium architecto illum cumque excepturi eligendi fugit tenetur aliquam, explicabo, magnam odit. Tempore.</p>
+                </div>
+
+                <hr>
+                <div class="feed__social">
+                    <div class="feed__social-re">    
+                        <div class="feed__social-react">Vote</div>
+                        <div class="feed__social-react">Comment</div>
+                    </div>
+                    <p class="feed__social-votes">9 Votes</p>
+                </div>
+                <hr>
+            </div>
+
+        </div>
+
+        
+        <div class="tips">
+            <div class="tips__tip">
+                <p class="tips__tip-description">Next Quizzes</p>
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+            </div>
+
+            <div class="tips__tip">
+                <p class="tips__tip-description">Bla Bla</p>
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+                <div class="tips__tip-theTip">
+                    <img src="img/back.jpg" alt="tip photo" class="tips__tip-photo">
+                    <p class="tips__tip-content">You have a quiz after 2 hours in <span class="tips__tip-group">EECE</span></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

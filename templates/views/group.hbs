@@ -1,0 +1,20 @@
+{{>header}}
+{{>groupSidebar}}
+
+<div class="feed" id="groupFeed" data-id="{{group._id}}">
+    <div class="post__share">
+        <form name="createPostForm" class="form">
+            <div class="form__group">
+                <textarea name="post" class="form__group-textarea" cols="30" rows="10" placeholder="شارك اسئلتك مع زملاءك"></textarea>
+                <input type="file" id="image" hidden>
+                <button type="button" class="btn" onclick="document.getElementById('image').click()">اختر صوره</button>
+                <button type="submit" class="btn">شارك</button>
+            </div>
+        </form>
+    </div>
+
+    <button class="btn" id="loadMore">Load more</button>
+</div>
+
+{{>groupTips}}
+{{>footer}}
